@@ -4,6 +4,6 @@ console.log(imgLampOff);
 console.log(btnLampOff);
 
 const imgLampOn = () => (imgLampOff.src = "./img/yellow_lamp.png");
-console.log(imgLampOn());
+// console.log(imgLampOn());
 
-// btnLampEl.addEventListener("click", () => )
+btnLampOff.addEventListener("click", imgLampOn);
