@@ -1,19 +1,24 @@
 const imgLampOff = document.getElementById("lamp");
-const btnLampOn = document.getElementById("btn-lamp");
+const btnLamp = document.getElementById("btn-lamp");
 
 console.log(imgLampOff);
-console.log(btnLampOn);
+console.log(btnLamp);
 
 const imgLampOn = () => (imgLampOff.src = "./img/yellow_lamp.png");
 // console.log(imgLampOn());
 
-btnLampOn.addEventListener("click", imgLampOn);
-
-const btnLampOff = () =>
+const btnLampChangeTxt = () =>
   (document.getElementById("btn-lamp").innerHTML = "Spegni");
-// console.log(btnLampOff());
+// console.log(btnLampChangeTxt());
 
-function clickSwitch() {
-  btnLampOn.onclick = btnLampOff;
-}
-console.log(clickSwitch());
+btnLamp.addEventListener("click", imgLampOn);
+btnLamp.addEventListener("click", btnLampChangeTxt);
+
+// function clickSwitch() {
+//   if (btnLamp !== on) {
+//     btnLamp.onclick = off;
+//   }
+//   return (btnLamp.onclick = on);
+// }
+
+// console.log(clickSwitch());
