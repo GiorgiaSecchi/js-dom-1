@@ -1,24 +1,35 @@
-const imgLampOff = document.getElementById("lamp");
+const imgLamp = document.getElementById("lamp");
 const btnLamp = document.getElementById("btn-lamp");
 
-console.log(imgLampOff);
+console.log(imgLamp);
 console.log(btnLamp);
 
-const imgLampOn = () => (imgLampOff.src = "./img/yellow_lamp.png");
-// console.log(imgLampOn());
+// const imgLampOn = () => (imgLamp.src = "./img/yellow_lamp.png");
+// // console.log(imgLampOn());
 
-const btnLampChangeTxt = () =>
-  (document.getElementById("btn-lamp").innerHTML = "Spegni");
-// console.log(btnLampChangeTxt());
+// const btnLampChangeTxt = () =>
+//   (document.getElementById("btn-lamp").innerHTML = "Spegni");
+// // console.log(btnLampChangeTxt());
 
-btnLamp.addEventListener("click", imgLampOn);
-btnLamp.addEventListener("click", btnLampChangeTxt);
+// btnLamp.addEventListener("click", imgLampOn);
+// btnLamp.addEventListener("click", btnLampChangeTxt);
 
-// function clickSwitch() {
-//   if (btnLamp !== on) {
-//     btnLamp.onclick = off;
-//   }
-//   return (btnLamp.onclick = on);
-// }
+//variabile booleana di partenza
+let isLampOff = true;
 
-// console.log(clickSwitch());
+const clickSwitch = () => {
+  isLampOff = !isLampOff;
+
+  //accendere
+  if (isLampOff) {
+    imgLamp.src = "./img/yellow_lamp.png";
+    btnLamp.innerHTML = "Spegni";
+    // spegnere
+  } else {
+    imgLamp.src = "./img/white_lamp.png";
+    btnLamp.innerHTML = "Accendi";
+  }
+};
+
+//ad ogni click che farò sul bottone si rievoca la funzione
+btnLamp.addEventListener("click", clickSwitch);
