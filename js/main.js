@@ -1,4 +1,9 @@
-const imgLamp = document.getElementsByTagName("img");
-const buttonLamp = document.getElementsByTagName("button");
-console.log(imgLamp);
-console.log(buttonLamp);
+const imgLampOff = document.getElementById("lamp");
+const btnLampOff = document.getElementById("btn-lamp");
+console.log(imgLampOff);
+console.log(btnLampOff);
+
+const imgLampOn = () => (imgLampOff.src = "./img/yellow_lamp.png");
+console.log(imgLampOn());
+
+// btnLampEl.addEventListener("click", () => )
